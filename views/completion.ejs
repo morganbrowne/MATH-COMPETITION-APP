@@ -1,0 +1,11 @@
+<%- include('partials/header', { title: 'Quiz Completed' }) %>
+<main>
+    <h1>Quiz Completed!</h1>
+    <p>Your streak: <strong><%= streak %></strong> correct answer(s) in a row.</p>
+    <form action="/start" method="POST">
+        <button type="submit">Start New Quiz</button>
+    </form>
+    <a href="/">Return to Home</a>
+</main>
+<%- include('partials/footer') %>
+

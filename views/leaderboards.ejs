@@ -1,0 +1,29 @@
+<!-- views/leaderboards.ejs -->
+<%- include('partials/header', { title: 'Leaderboards' }) %>
+<main>
+    <h1>Top 10 Streaks</h1>
+    <% if (topStreaks.length === 0) { %>
+        <p>No streaks recorded yet.</p>
+    <% } else { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Streak</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% topStreaks.forEach((entry, index) => { %>
+                    <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= entry.streak %></td>
+                        <td><%= new Date(entry.timestamp).toLocaleString() %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } %>
+    <a href="/">Return to Home</a>
+</main>
+<%- include('partials/footer') %>

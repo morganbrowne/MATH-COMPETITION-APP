@@ -23,3 +23,10 @@ Thumbs.db         # Windows
 
 # Coverage directory used by tools like istanbul
 coverage/
+# .env
+
+# Session secret for express-session
+SESSION_SECRET=your-very-secure-secret
+
+# Server port
+PORT=3000

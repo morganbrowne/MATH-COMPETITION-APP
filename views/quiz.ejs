@@ -1,15 +1,17 @@
+<!-- views/quiz.ejs -->
 <!-- The header ejs template is included to ensure our CSS and fonts are loaded -->
-<%- include('partials/header') %>
-
-    <!-- Display question or whatever else here -->
+<%- include('partials/header', { title: 'Math Quiz' }) %>
+<main>
     <h1>Math Quiz</h1>
     <p>Answer the question below:</p>
 
+    <!-- Display the current question -->
+    <p><strong><%= question %></strong></p>
+
     <form action="/quiz" method="POST">
-        <!-- This handles sending the user's answer back to the server. It's not recommended you modify this, as you shouldn't need to -->
         <label for="answer">Your Answer:</label>
         <input type="text" id="answer" name="answer" required>
         <button type="submit">Submit</button>
     </form>
-</body>
-</html>
+</main>
+<%- include('partials/footer') %>
