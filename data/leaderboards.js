@@ -18,7 +18,7 @@ function updateLeaderboards(streak) {
     // Sort the leaderboards in descending order based on streak
     leaderboards.sort((a, b) => b.streak - a.streak || a.timestamp - b.timestamp);
 
-    // Keep only the top 10 streaks
+    // only have top ten streaks 
     if (leaderboards.length > 10) {
         leaderboards.pop();
     }

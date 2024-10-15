@@ -3,12 +3,14 @@
 <%- include('partials/header', { title: 'Home' }) %>
 <main class="main-content index_container">
     <h1>Welcome to the Math Competition App</h1>
+   <!-- <div class="buttoncontainer">  -->
     <div class="navigation__container">
-        <a href="/leaderboards">View Leaderboards</a>
+        <a id = "leaderboard_button" href="/leaderboards">View Leaderboards</a>
         <form action="/start" method="POST">
-            <button type="submit">Start Quiz</button>
+            <button id = "button" type="submit">Start Quiz</button>
         </form>
     </div>
+    <!-- </div> -->
 </main>
 <%- include('partials/footer') %>
 
